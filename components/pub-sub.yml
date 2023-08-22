@@ -1,0 +1,19 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: pubsub
+spec:
+  version: v1
+  type: pubsub.rabbitmq
+  metadata:
+  - name: connectionString
+    value: amqp://admin:admin@localhost:5672/main
+#    value: amqp://admin:admin@rabbitmq:5672/main
+  - name: deletedWhenUnused
+    value: false
+  - name: deliveryMode
+    value: 2
+  - name: enableDeadLetter
+    value: true
+  - name: prefetchCount
+    value: 100

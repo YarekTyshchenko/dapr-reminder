@@ -1,0 +1,18 @@
+apiVersion: dapr.io/v1alpha1
+kind: Resiliency
+metadata:
+  name: resiliency
+spec:
+  policies:
+    retries:
+      # Retry for two minutes
+#      DefaultRetryPolicy:
+#        policy: constant
+#        duration: 1s
+#        maxRetries: 120
+
+#      retryForever: 
+#        policy: constant
+#        duration: 1s
+#        maxRetries: -1
+  targets:

@@ -1,0 +1,17 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+#  dapr: dapr run --app-id client --resources-path ./components -- dotnet run
+#  dapr-redis: dapr run --app-id dapr-reminder --app-port 5000 --dapr-http-port 3500 --
+
+  client:
+    dir: ./Client/
+    cmds:
+    - dapr run --app-id client --resources-path ../components --app-port 5000 --dapr-http-port 3500 -- dotnet run --urls http://+:5000
+
+  docker-build:
+  - dotnet publish
+  - docker build -t yarekt/dapr-reminder .
+  - docker push yarekt/dapr-reminder
