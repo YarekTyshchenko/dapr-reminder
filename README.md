@@ -1,7 +1,7 @@
 Simple Dapr app that uses Reminders
 ===================================
 
-Its really difficult to run more than one instance of a dapr app, so unfortunately we have to break out the nuclear hammer that is kubernetes. This stack requires `kind`, but it may work with others, you'll have to edit the requires files yourself.
+Its really difficult to run more than one instance of a dapr app, so unfortunately we have to break out the nuclear hammer that is kubernetes. This stack requires `kind`, but it may work with others, you'll have to edit the required files yourself.
 
 How to start:
 
